@@ -1,0 +1,44 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="airport3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/airport3_jar</output-path>
+    <root id="archive" name="airport3.jar">
+      <element id="module-output" name="airport3" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/controlsfx-8.20.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files (x86)/MySQL/Connector.J 5.1/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files (x86)/MySQL/Connector.J 5.1/mysql-connector-java-5.1.39-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-io-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-hyph-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdfa-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-sign-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-forms-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-kernel-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-layout-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdftest-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-barcodes-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-font-asian-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-io-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-io-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-itext-rups-7.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-hyph-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdfa-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdfa-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-sign-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-sign-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-forms-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-forms-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-kernel-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-kernel-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-layout-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-layout-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdftest-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-pdftest-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-barcodes-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-barcodes-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-font-asian-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-itext-rups-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-itext-rups-7.0.1-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-itext7-root-7.0.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_92/lib/iText 7/itext7-itext-rups-7.0.1-jar-with-dependencies.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

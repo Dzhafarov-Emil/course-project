@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - airport2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="airport2">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="airport"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="music_store"/>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="sakila"/>
+    <schema id="8" name="students"/>
+    <schema id="9" name="sys"/>
+    <schema id="10" name="ticket_office"/>
+    <schema id="11" name="world"/>
+    <table id="12" parent="1" name="allowance"/>
+    <table id="13" parent="1" name="class"/>
+    <table id="14" parent="1" name="discount"/>
+    <table id="15" parent="1" name="employee"/>
+    <table id="16" parent="1" name="flight"/>
+    <table id="17" parent="1" name="level_of_comfort"/>
+    <table id="18" parent="1" name="occupation"/>
+    <table id="19" parent="1" name="orders"/>
+    <table id="20" parent="1" name="passenger"/>
+    <table id="21" parent="1" name="student"/>
+    <table id="22" parent="1" name="trip"/>
+    <table id="23" parent="1" name="work_team"/>
+    <column id="24" parent="12" name="id_discount">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="25" parent="12" name="passenger_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="26" parent="12" name="first_use">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <index id="27" parent="12" name="fk_allowance_passenger1_idx">
+      <columns>passenger_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="28" parent="12" name="id_discount_idx">
+      <columns>id_discount</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="29" parent="12" name="PRIMARY">
+      <columns>passenger_id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="30" parent="12" name="id_discount">
+      <columns>id_discount</columns>
+      <ref-key>~.discount.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="31" parent="12" name="fk_allowance_passenger1">
+      <columns>passenger_id</columns>
+      <ref-key>~.passenger.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="32" parent="13" name="id_of_trip">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="33" parent="13" name="type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="34" parent="13" name="count_of_places">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="35" parent="13" name="ticket_cost">
+      <mandatory>1</mandatory>
+      <data-type>double|0</data-type>
+    </column>
+    <column id="36" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <index id="37" parent="13" name="id_UNIQUE">
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="38" parent="13" name="PRIMARY">
+      <columns>id_of_trip
+type</columns>
+      <primary>1</primary>
+    </key>
+    <key id="39" parent="13" name="id_UNIQUE">
+      <columns>id</columns>
+      <underlying-index>id_UNIQUE</underlying-index>
+    </key>
+    <foreign-key id="40" parent="13" name="id_of_trip">
+      <columns>id_of_trip</columns>
+      <ref-key>~.trip.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="41" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="42" parent="14" name="discount">
+      <mandatory>1</mandatory>
+      <data-type>double|0</data-type>
+    </column>
+    <column id="43" parent="14" name="type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="44" parent="14" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="45" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="46" parent="15" name="passport_number">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="47" parent="15" name="birthday">
+      <mandatory>1</mandatory>
+      <data-type>date|0</data-type>
+    </column>
+    <column id="48" parent="15" name="first_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="49" parent="15" name="last_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="50" parent="15" name="middle_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="51" parent="15" name="nationality">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="52" parent="15" name="identification_code">
+      <data-type>bigint(25)|0</data-type>
+    </column>
+    <column id="53" parent="15" name="login">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="54" parent="15" name="occupation">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="55" parent="15" name="identification_code_UNIQUE">
+      <columns>identification_code</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="56" parent="15" name="login_UNIQUE">
+      <columns>login</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="57" parent="15" name="passport_number_UNIQUE">
+      <columns>passport_number</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="58" parent="15" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="59" parent="15" name="passport_number_UNIQUE">
+      <columns>passport_number</columns>
+      <underlying-index>passport_number_UNIQUE</underlying-index>
+    </key>
+    <key id="60" parent="15" name="identification_code_UNIQUE">
+      <columns>identification_code</columns>
+      <underlying-index>identification_code_UNIQUE</underlying-index>
+    </key>
+    <key id="61" parent="15" name="login_UNIQUE">
+      <columns>login</columns>
+      <underlying-index>login_UNIQUE</underlying-index>
+    </key>
+    <column id="62" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="63" parent="16" name="departure">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="64" parent="16" name="trip_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="65" parent="16" name="id_UNIQUE">
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="66" parent="16" name="PRIMARY">
+      <columns>trip_id
+departure</columns>
+      <primary>1</primary>
+    </key>
+    <key id="67" parent="16" name="id_UNIQUE">
+      <columns>id</columns>
+      <underlying-index>id_UNIQUE</underlying-index>
+    </key>
+    <foreign-key id="68" parent="16" name="trip_id">
+      <columns>trip_id</columns>
+      <ref-key>~.trip.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="69" parent="17" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="70" parent="17" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <index id="71" parent="17" name="name_UNIQUE">
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="72" parent="17" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="73" parent="17" name="name_UNIQUE">
+      <columns>name</columns>
+      <underlying-index>name_UNIQUE</underlying-index>
+    </key>
+    <column id="74" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="75" parent="18" name="occupation">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="76" parent="18" name="salary">
+      <mandatory>1</mandatory>
+      <data-type>double|0</data-type>
+    </column>
+    <index id="77" parent="18" name="occupation_UNIQUE">
+      <columns>occupation</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="78" parent="18" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="79" parent="18" name="occupation_UNIQUE">
+      <columns>occupation</columns>
+      <underlying-index>occupation_UNIQUE</underlying-index>
+    </key>
+    <column id="80" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="81" parent="19" name="class_of_comfort">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="82" parent="19" name="flight_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="83" parent="19" name="pass_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="84" parent="19" name="date_time_reserve">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="85" parent="19" name="id_of_employee">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="86" parent="19" name="class_of_comfort_idx">
+      <columns>class_of_comfort</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="87" parent="19" name="id_of_employee_idx">
+      <columns>id_of_employee</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="88" parent="19" name="id_UNIQUE">
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="89" parent="19" name="passenger_id_idx">
+      <columns>pass_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="90" parent="19" name="PRIMARY">
+      <columns>flight_id
+pass_id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="91" parent="19" name="id_UNIQUE">
+      <columns>id</columns>
+      <underlying-index>id_UNIQUE</underlying-index>
+    </key>
+    <foreign-key id="92" parent="19" name="class_of_comfort">
+      <columns>class_of_comfort</columns>
+      <ref-key>~.class.id_UNIQUE</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="93" parent="19" name="flight_id">
+      <columns>flight_id</columns>
+      <ref-key>~.flight.id_UNIQUE</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="94" parent="19" name="pass_id">
+      <columns>pass_id</columns>
+      <ref-key>~.passenger.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="95" parent="19" name="id_of_employee">
+      <columns>id_of_employee</columns>
+      <ref-key>~.employee.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>set_null</cascade-delete-rule>
+    </foreign-key>
+    <column id="96" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="97" parent="20" name="first_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="98" parent="20" name="last_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="99" parent="20" name="middle_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="100" parent="20" name="birthday">
+      <mandatory>1</mandatory>
+      <data-type>date|0</data-type>
+    </column>
+    <column id="101" parent="20" name="passport_number">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="102" parent="20" name="nationality">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="103" parent="20" name="discount">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="104" parent="20" name="discount_idx">
+      <columns>discount</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="105" parent="20" name="passport_number_UNIQUE">
+      <columns>passport_number</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="106" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="107" parent="20" name="passport_number_UNIQUE">
+      <columns>passport_number</columns>
+      <underlying-index>passport_number_UNIQUE</underlying-index>
+    </key>
+    <foreign-key id="108" parent="20" name="discount">
+      <columns>discount</columns>
+      <ref-key>~.discount.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>set_null</cascade-delete-rule>
+    </foreign-key>
+    <column id="109" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="110" parent="21" name="fio">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="111" parent="21" name="group_id">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="112" parent="21" name="Birthday">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="113" parent="21" name="studentcol">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="114" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="115" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="116" parent="22" name="departure_from">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="117" parent="22" name="arrival_in">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="118" parent="22" name="duration">
+      <mandatory>1</mandatory>
+      <data-type>time|0</data-type>
+    </column>
+    <column id="119" parent="22" name="airline">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="120" parent="22" name="number">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="121" parent="22" name="number_UNIQUE">
+      <columns>number</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="122" parent="22" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="123" parent="22" name="number_UNIQUE">
+      <columns>number</columns>
+      <underlying-index>number_UNIQUE</underlying-index>
+    </key>
+    <column id="124" parent="23" name="employee_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="125" parent="23" name="occupation_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="126" parent="23" name="hiring_date">
+      <mandatory>1</mandatory>
+      <data-type>date|0</data-type>
+    </column>
+    <column id="127" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <index id="128" parent="23" name="id_UNIQUE">
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="129" parent="23" name="occupation_id_idx">
+      <columns>occupation_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="130" parent="23" name="PRIMARY">
+      <columns>employee_id
+occupation_id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="131" parent="23" name="id_UNIQUE">
+      <columns>id</columns>
+      <underlying-index>id_UNIQUE</underlying-index>
+    </key>
+    <foreign-key id="132" parent="23" name="employee_id">
+      <columns>employee_id</columns>
+      <ref-key>~.employee.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="133" parent="23" name="occupation_id">
+      <columns>occupation_id</columns>
+      <ref-key>~.occupation.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+  </database-model>
+</dataSource>
